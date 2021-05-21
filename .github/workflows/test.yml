@@ -1,7 +1,9 @@
 name: Test 
 
-on: 
-  push
+on:
+  workflow_run:
+    workflows: ["build"]
+    types: [completed]
 
 jobs:
   run:
